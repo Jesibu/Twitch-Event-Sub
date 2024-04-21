@@ -1,1 +1,1 @@
-# Twitch-Event-Sub-hass.io-
+# Twitch-Event-Sub
