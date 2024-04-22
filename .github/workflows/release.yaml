@@ -15,7 +15,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: "✏️ Checkout code"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with: 
           path: './'
 
@@ -24,7 +24,7 @@ jobs:
         run: echo "COMPONENT_VERSION=$(jq -r .version custom_components/*/manifest.json)" >> $GITHUB_ENV
 
       - name: "🏷️ Check if tag exists already"
-        uses: mukunku/tag-exists-action@v1.2.0
+        uses: mukunku/tag-exists-action@v1.6.0
         id: "check_tag"
         with: 
           tag: "v${{ env.COMPONENT_VERSION }}"
@@ -40,7 +40,7 @@ jobs:
 
       - name: "🗝️ Get previous release version"
         id: last_release
-        uses: InsonusK/get-latest-release@v1.0.1
+        uses: InsonusK/get-latest-release@v1.1.0
         with:
           myToken: ${{ github.token }}
           exclude_types: "draft|prerelease"
