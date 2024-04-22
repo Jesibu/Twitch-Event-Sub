@@ -1,0 +1,18 @@
+{
+    "domain": "twitch_event_sub",
+    "name": "Twitch Event Sub",
+    "codeowners": [
+      "@Jesibu"
+    ],
+    "version": "0.0.1",
+    "config_flow": true,
+    "dependencies": [
+      "application_credentials"
+    ],
+    "documentation": "https://www.home-assistant.io/integrations/twitch_event_sub",
+    "iot_class": "cloud_polling",
+    "loggers": ["twitch_event_sub"],
+    "requirements": [
+      "twitchAPI==4.1.0"
+    ]
+  }
