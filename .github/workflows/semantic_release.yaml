@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with: 
-          ref: ${{ GITHUB_REF }}
+          ref: ${{ github.ref }}
           path: './'
 
       - name: Setup Node.js
