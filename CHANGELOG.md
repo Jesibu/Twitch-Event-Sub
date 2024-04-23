@@ -1,3 +1,10 @@
+## [0.1.5-beta.2](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.5-beta.1...v0.1.5-beta.2) (2024-04-23)
+
+
+### Bug Fixes
+
+* version script and backmerge ([84f8af2](https://github.com/Jesibu/Twitch-Event-Sub/commit/84f8af21712950e2d5367aea26a37f13bb8a2073))
+
 ## [0.1.5-beta.1](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.4...v0.1.5-beta.1) (2024-04-23)
 
 
