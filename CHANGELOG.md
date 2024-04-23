@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.3...v0.1.4) (2024-04-23)
+
+
+### Bug Fixes
+
+* test release beta ([cc12747](https://github.com/Jesibu/Twitch-Event-Sub/commit/cc12747a7e260ff8920e33cf4ae9a80461686d9f))
+
 ## [0.1.3](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.2...v0.1.3) (2024-04-23)
 
 
