@@ -29,8 +29,8 @@ jobs:
       - name: Install dependencies
         run: npm install
       
-      - name: permit
-        run: chmod -x $GITHUB_WORKSPACE/version.sh
+ #     - name: permit
+ #       run: chmod -x $GITHUB_WORKSPACE/version.sh
 
       - name: Release
         run: npx semantic-release
