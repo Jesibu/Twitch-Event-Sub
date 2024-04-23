@@ -1,3 +1,10 @@
+## [0.1.5-beta.1](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.4...v0.1.5-beta.1) (2024-04-23)
+
+
+### Bug Fixes
+
+* semrel add custom_components/twitch_event_sub/manifest.json ([8666ec0](https://github.com/Jesibu/Twitch-Event-Sub/commit/8666ec0694867e6975777047912e6ee133f4ddb7))
+
 ## [0.1.4](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.3...v0.1.4) (2024-04-23)
 
 
