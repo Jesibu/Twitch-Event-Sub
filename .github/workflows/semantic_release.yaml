@@ -20,6 +20,8 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
+        with:
+          node-version: 20
           
       - name: Setup package.json
         run: echo '{"name":"demo", "devDependencies":{"@semantic-release/git":"^10.0.1","@semantic-release/exec":"^6.0.3","semantic-release":"^23.0.8", "@semantic-release/changelog":"^6.0.3", "@saithodev/semantic-release-backmerge":"^4.0.1", "@semantic-release/github":"^10.0.3"}}' > package.json
