@@ -1,3 +1,13 @@
+## [0.1.3](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.2...v0.1.3) (2024-04-23)
+
+
+### Bug Fixes
+
+* remove constrain ([cbce5ff](https://github.com/Jesibu/Twitch-Event-Sub/commit/cbce5ff0e69b1ea477a76ca09693c6e4c275ad35))
+* remove ref ([7eb5eb2](https://github.com/Jesibu/Twitch-Event-Sub/commit/7eb5eb21c43197faae1c4d7a2c661fd52dd3dedd))
+* run on branches ([acd7890](https://github.com/Jesibu/Twitch-Event-Sub/commit/acd7890dc1eded7e3fdd2365e5cdb57c525610c7))
+* test github.event.workflow_run.head_branch ([864cb56](https://github.com/Jesibu/Twitch-Event-Sub/commit/864cb56f1446c11e1395431398d315509fedd7d0))
+
 ## [0.1.2](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.1...v0.1.2) (2024-04-23)
 
 
