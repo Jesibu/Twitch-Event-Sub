@@ -2,10 +2,11 @@
 name: "Semantic Release"
 
 on:
-  workflow_run:
-    workflows: [CI]
-    types:
-      - completed
+  push:
+    branches:
+      - 'main'
+      - 'master'
+      - 'develop'
 
 jobs:
   auto-release:
