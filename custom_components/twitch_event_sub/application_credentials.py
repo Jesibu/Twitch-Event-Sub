@@ -1,4 +1,4 @@
-"""application_credentials platform the Twitch-Event-Sub integration."""
+"""application_credentials platform the Twitch Event Sub integration."""
 
 from homeassistant.components.application_credentials import AuthorizationServer
 from homeassistant.core import HomeAssistant
