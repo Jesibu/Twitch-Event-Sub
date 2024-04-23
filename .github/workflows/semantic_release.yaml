@@ -10,7 +10,6 @@ on:
 
 jobs:
   auto-release:
-    if: ${{ (github.ref_name == 'main' || github.ref_name == 'develop') && github.event.workflow_run.conclusion == 'success' }}
     name: "Auto Release"
     runs-on: "ubuntu-latest"
     steps:
