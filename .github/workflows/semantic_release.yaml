@@ -1,0 +1,35 @@
+---
+name: "Semantic Release"
+
+on:
+  workflow_run:
+    workflows: [CI, "Hacs Action"]
+    types:
+      - completed
+
+jobs:
+  auto-release:
+    if: ${{ (github.ref_name == 'main' || github.ref_name == 'develop') && github.event.workflow_run.conclusion == 'success' }}
+    name: "Auto Release"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with: 
+          path: './'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          
+      - name: Setup package.json
+        run: echo '{"name":"demo", "devDependencies":{"@semantic-release/git":"^10.0.1","@semantic-release/exec":"^6.0.3","semantic-release":"^19.0.5", "@semantic-release/changelog":"^6.0.3", "@saithodev/semantic-release-backmerge":"^4.0.1", "@semantic-release/github":"^10.0.3"}}' > package.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Release
+        run: npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
