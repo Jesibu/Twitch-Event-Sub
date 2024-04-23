@@ -1,3 +1,24 @@
+## [0.1.5-beta.3](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.5-beta.2...v0.1.5-beta.3) (2024-04-23)
+
+
+### Bug Fixes
+
+* remove unused var from varsion.sh ([aeee98c](https://github.com/Jesibu/Twitch-Event-Sub/commit/aeee98cdd23f2e2c7f2a9c1b39b8bfb4f52e2212))
+
+## [0.1.5-beta.2](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.5-beta.1...v0.1.5-beta.2) (2024-04-23)
+
+
+### Bug Fixes
+
+* version script and backmerge ([84f8af2](https://github.com/Jesibu/Twitch-Event-Sub/commit/84f8af21712950e2d5367aea26a37f13bb8a2073))
+
+## [0.1.5-beta.1](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.4...v0.1.5-beta.1) (2024-04-23)
+
+
+### Bug Fixes
+
+* semrel add custom_components/twitch_event_sub/manifest.json ([8666ec0](https://github.com/Jesibu/Twitch-Event-Sub/commit/8666ec0694867e6975777047912e6ee133f4ddb7))
+
 ## [0.1.4](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.3...v0.1.4) (2024-04-23)
 
 

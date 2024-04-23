@@ -11,9 +11,11 @@
   "documentation": "https://www.home-assistant.io/integrations/twitch_event_sub",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/Jesibu/Twitch-Event-Sub/issues",
-  "loggers": ["twitch_event_sub"],
+  "loggers": [
+    "twitch_event_sub"
+  ],
   "requirements": [
     "twitchAPI==4.1.0"
   ],
-  "version": "0.0.2"
+  "version": "0.1.5-beta.3"
 }
