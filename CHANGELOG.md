@@ -1,3 +1,10 @@
+## [0.1.5-beta.3](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.5-beta.2...v0.1.5-beta.3) (2024-04-23)
+
+
+### Bug Fixes
+
+* remove unused var from varsion.sh ([aeee98c](https://github.com/Jesibu/Twitch-Event-Sub/commit/aeee98cdd23f2e2c7f2a9c1b39b8bfb4f52e2212))
+
 ## [0.1.5-beta.2](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.5-beta.1...v0.1.5-beta.2) (2024-04-23)
 
 
