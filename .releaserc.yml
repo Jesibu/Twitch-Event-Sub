@@ -1,0 +1,25 @@
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - "@semantic-release/release-notes-generator"
+  - "@semantic-release/changelog"
+  - - "@semantic-release/exec"
+#    - prepareCmd: $CI_PROJECT_DIR/.m2/prepare.sh ${nextRelease.version}
+    - publishCmd: publish.sh ${nextRelease.version}
+  - - "@semantic-release/git"
+    - assets:
+        - CHANGELOG.md
+  - "@semantic-release/github"
+  # As discussed in this issue: https://github.com/semantic-release/semantic-release/issues/1603 there is no support for GitFlow.
+  # If we would like to stick to kinda GitFlow (with prerelease/develop), we will have to use this community plugin or merge back by ourselves.
+  - - "@saithodev/semantic-release-backmerge"
+    - branches:
+        - from: main
+          to: develop
+      clearWorkspace: true
+      restoreWorkspace: true
+      backmergeStrategy: merge
+branches:
+  - main
+  - +([0-9])?(.{+([0-9]),x}).x
+  - name: develop
+    prerelease: beta
