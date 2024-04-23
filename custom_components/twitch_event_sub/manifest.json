@@ -1,6 +1,6 @@
 {
   "domain": "twitch_event_sub",
-  "name": "$1",
+  "name": "Twitch Event Sub",
   "codeowners": [
     "@Jesibu"
   ],
@@ -17,5 +17,5 @@
   "requirements": [
     "twitchAPI==4.1.0"
   ],
-  "version": "0.0.2"
+  "version": "v.0.0.5"
 }
