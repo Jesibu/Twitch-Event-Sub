@@ -1,3 +1,10 @@
+## [0.1.6](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.5...v0.1.6) (2024-04-25)
+
+
+### Bug Fixes
+
+* add releasebot to owner ([18557f9](https://github.com/Jesibu/Twitch-Event-Sub/commit/18557f952692f4ab788e7b1b32287c162bf9aa9d))
+
 ## [0.1.5](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.4...v0.1.5) (2024-04-23)
 
 
