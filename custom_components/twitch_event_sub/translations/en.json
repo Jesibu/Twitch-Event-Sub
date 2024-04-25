@@ -10,8 +10,7 @@
     },
     "error": {
       "already_configured": "Device is already configured"
-    },
-    "title": "Twitch Options"
+    }
   },
   "options": {
     "step": {
@@ -24,7 +23,6 @@
     },
     "error": {
       "already_configured": "Device is already configured"
-    },
-    "title": "Twitch Options"
+    }
   }
 }

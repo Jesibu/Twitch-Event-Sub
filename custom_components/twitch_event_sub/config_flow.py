@@ -9,12 +9,10 @@ from twitchAPI.helper import first
 from twitchAPI.twitch import Twitch
 import voluptuous as vol
 
-from homeassistant import config_entries
 from homeassistant.config_entries import ConfigEntry, FlowResult
 from homeassistant.const import CONF_ACCESS_TOKEN, CONF_TOKEN
 from homeassistant.helpers import config_entry_oauth2_flow, config_validation as cv
 from homeassistant.helpers.config_entry_oauth2_flow import LocalOAuth2Implementation
-from homeassistant.helpers.dispatcher import callback
 
 from .const import CONF_FOLLOWER, CONF_NEW_SUBSCRIBER, DOMAIN, LOGGER, OAUTH_SCOPES
 
