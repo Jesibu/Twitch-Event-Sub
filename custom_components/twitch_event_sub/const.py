@@ -19,8 +19,16 @@ DOMAIN = "twitch_event_sub"
 CLIENT = "client"
 SESSION = "session"
 
+SUBSCRIBE_EVENT_SUB_NEW_FOLLOWER = "twitch_event_sub_new_follower"
+SUBSCRIBE_EVENT_SUB_NEW_SUBSCRIBER = "twitch_event_sub_new_subscriber"
+
+CONF_FOLLOWER = "new_follower"
+CONF_NEW_SUBSCRIBER = "new_subscriber"
+
 OAUTH_SCOPES = [
     AuthScope.USER_READ_SUBSCRIPTIONS,
     AuthScope.USER_READ_FOLLOWS,
     AuthScope.MODERATOR_READ_FOLLOWERS,
 ]
+
+ICON = "mdi:twitch"

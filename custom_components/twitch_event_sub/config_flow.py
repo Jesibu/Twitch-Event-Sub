@@ -2,19 +2,38 @@
 
 from __future__ import annotations
 
-from collections.abc import Mapping
 import logging
 from typing import Any, cast
 
 from twitchAPI.helper import first
 from twitchAPI.twitch import Twitch
+import voluptuous as vol
 
+from homeassistant import config_entries
 from homeassistant.config_entries import ConfigEntry, FlowResult
 from homeassistant.const import CONF_ACCESS_TOKEN, CONF_TOKEN
-from homeassistant.helpers import config_entry_oauth2_flow
+from homeassistant.helpers import config_entry_oauth2_flow, config_validation as cv
 from homeassistant.helpers.config_entry_oauth2_flow import LocalOAuth2Implementation
+from homeassistant.helpers.dispatcher import callback
 
-from .const import DOMAIN, LOGGER, OAUTH_SCOPES
+from .const import CONF_FOLLOWER, CONF_NEW_SUBSCRIBER, DOMAIN, LOGGER, OAUTH_SCOPES
+
+
+def _schema_with_defaults(
+    follower: bool | None = True, sub: bool | None = True
+) -> vol.Schema:
+    return vol.Schema(
+        {
+            vol.Optional(
+                CONF_FOLLOWER,
+                default=follower,
+            ): cv.boolean,
+            vol.Optional(
+                CONF_NEW_SUBSCRIBER,
+                default=sub,
+            ): cv.boolean,
+        }
+    )
 
 
 class OAuth2FlowHandler(
@@ -29,6 +48,14 @@ class OAuth2FlowHandler(
         """Initialize flow."""
         super().__init__()
         self.data: dict[str, Any] = {}
+
+    # @staticmethod
+    # @callback
+    # def async_get_options_flow(
+    #     config_entry: config_entries.ConfigEntry,
+    # ) -> config_entries.OptionsFlow:
+    #     """Get the options flow for this handler."""
+    #     return TwitchOptionFlowHandler(config_entry)
 
     @property
     def logger(self) -> logging.Logger:
@@ -67,9 +94,13 @@ class OAuth2FlowHandler(
             await self.async_set_unique_id(user_id)
             self._abort_if_unique_id_configured()
 
-            return self.async_create_entry(
-                title=user.display_name, data=data, options={}
+            data2 = self.async_create_entry(
+                title=user.display_name,
+                data=data,
+                options={CONF_FOLLOWER: True, CONF_NEW_SUBSCRIBER: True},
             )
+            LOGGER.info(f"Created new entry for {data2}")
+            return data2
 
         if self.reauth_entry.unique_id == user_id:
             self.hass.config_entries.async_update_entry(
@@ -85,17 +116,30 @@ class OAuth2FlowHandler(
             description_placeholders={"title": self.reauth_entry.title},
         )
 
-    async def async_step_reauth(self, entry_data: Mapping[str, Any]) -> FlowResult:
-        """Perform reauth upon an API authentication error."""
-        self.reauth_entry = self.hass.config_entries.async_get_entry(
-            self.context["entry_id"]
-        )
-        return await self.async_step_reauth_confirm()
 
-    async def async_step_reauth_confirm(
-        self, user_input: dict[str, Any] | None = None
-    ) -> FlowResult:
-        """Confirm reauth dialog."""
-        if user_input is None:
-            return self.async_show_form(step_id="reauth_confirm")
-        return await self.async_step_user()
+# class TwitchOptionFlowHandler(config_entries.OptionsFlow):
+#     """Twitch config flow options handler."""
+
+#     def __init__(self, config_entry) -> None:
+#         """Initialize Twitch options flow."""
+#         self.config_entry = config_entry
+
+#     async def async_step_init(
+#         self, user_input: dict[str, Any] | None = None
+#     ) -> FlowResult:
+#         """Manage the Twitch options."""
+#         if user_input is not None:
+#             self.hass.config_entries.async_update_entry(
+#                 self.config_entry, data=self.config_entry.data, options=user_input
+#             )
+#             return self.async_create_entry(title="", data=user_input)
+
+#         current_follower = self.config_entry.options.get(CONF_FOLLOWER, False)
+#         current_new_subscriber = self.config_entry.options.get(
+#             CONF_NEW_SUBSCRIBER, False
+#         )
+
+#         return self.async_show_form(
+#             step_id="init",
+#             data_schema=_schema_with_defaults(current_follower, current_new_subscriber),
+#         )

@@ -1,0 +1,30 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "new_follower": "New Follower Subscription",
+          "new_subscriber": "New Subscriber Subscription"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Device is already configured"
+    },
+    "title": "Twitch Options"
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "new_follower": "New Follower Subscription",
+          "new_subscriber": "New Subscriber Subscription"
+        }
+      }
+    },
+    "error": {
+      "already_configured": "Device is already configured"
+    },
+    "title": "Twitch Options"
+  }
+}
