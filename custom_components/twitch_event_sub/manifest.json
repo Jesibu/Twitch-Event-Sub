@@ -17,5 +17,5 @@
   "requirements": [
     "twitchAPI==4.1.0"
   ],
-  "version": "0.1.7-beta.1"
+  "version": "0.1.7"
 }
