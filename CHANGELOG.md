@@ -1,3 +1,11 @@
+## [0.1.7-beta.1](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.6...v0.1.7-beta.1) (2024-04-25)
+
+
+### Bug Fixes
+
+* Update CODEOWNERS to include [@semantic-release-bot](https://github.com/semantic-release-bot) ([0eb3d01](https://github.com/Jesibu/Twitch-Event-Sub/commit/0eb3d01d38c85c992c7bc1f847b5b02e3f82a3b1))
+* Update README.md (version Bump) ([b2b7f79](https://github.com/Jesibu/Twitch-Event-Sub/commit/b2b7f798b98c40b0b9592f63b0c615d309d4ed76))
+
 ## [0.1.6](https://github.com/Jesibu/Twitch-Event-Sub/compare/v0.1.5...v0.1.6) (2024-04-25)
 
 
